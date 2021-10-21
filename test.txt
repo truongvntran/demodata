@@ -1,0 +1,12 @@
+// Thêm user // chưa hoàn thành // bị lỗi // ktra lại
+app.get ('/insert-user/:id/:name/:phone', function(req, res){
+  let id_insert = req.params.id;
+  let name_insert = req.params.name.toString;
+  let phone_insert = req.params.phone;
+  connection.query('insert into user.inforuser (ID, Name, Phone) values ?' , id_insert, name_insert, phone_insert,
+  function(error, results, fields){
+    if (error) throw error;
+     return res.send({message: 'Insert is completed!!' });
+  });
+})
+
